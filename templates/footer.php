@@ -1,0 +1,1 @@
+<footer>This is the footer <br> &copy <?php echo date('Y');?></footer>
