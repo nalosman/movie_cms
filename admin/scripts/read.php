@@ -46,3 +46,7 @@ function getMoviesByFilter($args){
     return 'There was a problem accessing this info';
   }
 }
+
+
+
+//3functions being used
