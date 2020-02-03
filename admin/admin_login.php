@@ -1,7 +1,7 @@
 <?php
   require_once '../load.php';
 
-  $ip = $_SERVER['REMOTE_ADDR'];
+  $ip = $_SERVER['REMOTE_ADDR'];   //
 
   if(isset($_POST['submit'])){
     //trim-->cuts out extra space
@@ -10,7 +10,7 @@
 
     if(!empty($username) && !empty($password)){
       //log user in 
-      $message = login($username, $password);
+      $message = login($username, $password, $ip);
     }else {
       $message = 'Please fill out the required field';
     }
