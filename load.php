@@ -13,7 +13,7 @@ require_once ABSPATH.'/config/database.php';
 require_once ADMIN_SCRIPT_PATH.'/read.php';
 require_once ADMIN_SCRIPT_PATH.'/login.php';
 require_once ADMIN_SCRIPT_PATH.'/functions.php';
-require_once ADMIN_SCRIPT_PATH.'/user.php;
+require_once ADMIN_SCRIPT_PATH.'/user.php';
 
 
 //loads functions to where they need to go go, A Bridge
