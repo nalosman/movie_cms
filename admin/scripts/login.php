@@ -27,6 +27,10 @@ function login($username, $password, $ip){
       $id = $found_user['user_id'];
       //Logged In
       $message = 'you just logged in!';
+      $_SESSION['user_id'] = $id;
+      $_SESSION['user_name'] = $found_user['user_fname'];
+      
+      
       //TODO: finish the following lines so that when user logged in 
       //the user ip column get update by the $ip
       $update_query = 'UPDATE tbl_user SET user_ip = :ip WHERE user_id= '.$id.' ';
@@ -49,4 +53,15 @@ function login($username, $password, $ip){
    $message = 'User does not exist!';
  }
  return $message;
+}
+
+function confirm_logged_in(){
+  if(!isset($_SESSION['user_id'])){
+    redirect_to('admin_login.php');
+  }
+}
+
+function logout() {
+  session_destroy();
+  redirect_to('admin_login.php');
 }
